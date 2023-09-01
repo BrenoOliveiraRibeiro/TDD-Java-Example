@@ -1,10 +1,25 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.calculadoraTeste;
 
-public class CalculadoraTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.beans.Transient;
+
+import org.junit.jupiter.api.Test;
+
+public class TesteCalc {
     @Test
-    public void testSoma() {
-        Calculadora calc = new Calculadora();
-        assertEquals(5, calc.soma(2, 3));
+    public void testSub() {
+        Calculator calculator = new Calculator();
+        int result = calculator.sub(3, 2);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testDiv() {
+        Calculator calculator = new Calculator();
+        int result = calculator.div(3, 2);
+        assertEquals(1.5, result);
     }
 }
